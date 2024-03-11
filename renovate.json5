@@ -1,0 +1,18 @@
+{
+  "pip-compile": {
+    fileMatch: [
+      "^requirements\\.in$"
+    ],
+  },
+  pip_requirements: {
+    enabled: false,
+  },
+  packageRules: [
+    {
+      groupName: "all patch dependencies",
+      groupSlug: "all-patch-dependencies",
+      matchPackagePatterns: ["*"],
+      matchUpdateTypes: ["patch"],
+    },
+  ],
+}
